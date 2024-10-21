@@ -25,7 +25,7 @@ O `yt-dlp` é uma ferramenta poderosa para baixar vídeos e áudio de várias pl
 2. Inicialize o projeto e instale as dependências necessárias:
 
    ```bash
-   npm init - y
+   npm init -y
    npm install dotenv child_process p-limit fs axios
 
  3. Crie um arquivo ``.env`` no diretorio do codigo e adicione suas keys do Spotify:
@@ -42,8 +42,34 @@ Certifique-se de preencher os valores das variáveis com suas keys do Spotify. V
 
 Após todas as dependências estarem instaladas corretamente, no arquivo ``nomes.js`` na linha 7, insira a URL da sua playlist da qual você irá extrair os nomes das músicas.
 
+    ```bash
+    const playlistUrl = 'https://open.spotify.com/playlist/sua_playlist';
+
+## Como executar
+
+Para iniciar o código e extrair os nomes das músicas da sua playlist, siga os passos abaixo:
+
+1. No terminal, execute o seguinte comando:
+
    ```bash
-      const playlistUrl = 'http://link_da_sua_playlist_aqui';
+   node nomes.js
 
+Após a execução, um arquivo .txt será gerado no diretório do projeto. Nesse arquivo, você encontrará o nome de todas as músicas da sua playlist e seus respectivos artistas.
 
+2. Agora para baixar todas as musicas, no terminal o seguinte comando
 
+   ```bash
+   node downloads.js
+
+O script irá ler o arquivo ``tracks.txt`` que contém o nome de todas as músicas da sua playlist. Em seguida, ele baixará automaticamente todas as músicas e as salvará em uma pasta chamada ``Downloads``, que será criada no diretório do projeto.
+
+## Estrutura do projeto
+
+├── downloads/ # Pasta onde as músicas serão salvas
+├── node_modules/ # Pasta contendo as dependências do projeto 
+├── .env # Arquivo com as credenciais do Spotify 
+├── downloads.js # Script responsável pelo download das músicas 
+├── nomes.js # Script para extrair os nomes das músicas da playlist 
+└── tracks.txt # Arquivo gerado pelo nomes.js que da os nomes das músicas e artistas
+├── package-lock.json # Arquivo gerado automaticamente para controlar as versões das dependências 
+├── package.json # Arquivo de configuração do projeto Node.js 
