@@ -58,18 +58,7 @@ Após a execução, um arquivo .txt será gerado no diretório do projeto. Nesse
 
 2. Agora para baixar todas as musicas, no terminal o seguinte comando
 
-   ```bash
+    ```bash
    node downloads.js
 
 O script irá ler o arquivo ``tracks.txt`` que contém o nome de todas as músicas da sua playlist. Em seguida, ele baixará automaticamente todas as músicas e as salvará em uma pasta chamada ``Downloads``, que será criada no diretório do projeto.
-
-## Estrutura do projeto
-
-├── downloads/ # Pasta onde as músicas serão salvas
-├── node_modules/ # Pasta contendo as dependências do projeto 
-├── .env # Arquivo com as credenciais do Spotify 
-├── downloads.js # Script responsável pelo download das músicas 
-├── nomes.js # Script para extrair os nomes das músicas da playlist 
-└── tracks.txt # Arquivo gerado pelo nomes.js que da os nomes das músicas e artistas
-├── package-lock.json # Arquivo gerado automaticamente para controlar as versões das dependências 
-├── package.json # Arquivo de configuração do projeto Node.js 
