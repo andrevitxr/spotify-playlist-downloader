@@ -1,6 +1,6 @@
 # Spotify Playlist Downloader
 
-Um projeto simples para baixar músicas de playlists do Spotify, extraindo os nomes das músicas e usando o `yt-dlp` para o download.
+Um projeto simples para baixar playlists inteiras do Spotify, extraindo os nomes de suas músicas e usando o `yt-dlp` para o download.
 
 ## Dependências
 
